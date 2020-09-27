@@ -11,7 +11,7 @@ import { useForm } from 'react-hook-form'
 import { useHistory } from 'react-router-dom'
 
 const ActivitySearchCard = () => {
-  const history = useHistory();
+  const history = useHistory()
   const { register, handleSubmit, errors, formState } = useForm()
   const onSubmit = (search) => {
     localStorage.setItem('search', search)

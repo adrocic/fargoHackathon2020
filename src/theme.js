@@ -17,6 +17,11 @@ const customTheme = {
       900: '#000e21',
     },
   },
+  fonts: {
+    ...theme.fonts,
+    body: 'Roboto, sans-serif',
+    logo: 'Lato, sans-serif',
+  },
 }
 
 export default customTheme
