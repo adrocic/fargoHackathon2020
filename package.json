@@ -9,14 +9,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.20.0",
     "emotion-theming": "^10.0.27",
+    "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.8.6",
-    "react-scripts": "3.4.3"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "typewriter-effect": "^2.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "watch": "nodemon app.js",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "eslintConfig": {
@@ -35,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "miragejs": "^0.1.41"
+    "miragejs": "^0.1.41",
+    "prettier": "^2.1.2"
   }
 }
