@@ -4,6 +4,7 @@ import { CSSReset, ThemeProvider } from '@chakra-ui/core'
 
 import customTheme from './theme'
 import Home from './Views/Home'
+import Map from './Views/Map'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/map">
+            <Map />
           </Route>
         </Switch>
       </Router>

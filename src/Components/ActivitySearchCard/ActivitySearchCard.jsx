@@ -8,10 +8,15 @@ import {
   FormErrorMessage,
 } from '@chakra-ui/core'
 import { useForm } from 'react-hook-form'
+import { useHistory } from 'react-router-dom'
 
 const ActivitySearchCard = () => {
+  const history = useHistory();
   const { register, handleSubmit, errors, formState } = useForm()
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (search) => {
+    localStorage.setItem('search', search)
+    history.push('/map')
+  }
 
   return (
     <Flex
