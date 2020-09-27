@@ -31,8 +31,7 @@ const Map = () => {
           height="450"
           frameBorder="0"
           style={{ border: 0 }}
-          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAGWYDoqieZZOZEeo_LN96h0Qt7QaXJxpo
-    &q=fargo`}
+          src={`https://www.google.com/maps/embed/v1/place?&q=fargo`}
           allowFullScreen
         ></iframe>
       </Flex>
