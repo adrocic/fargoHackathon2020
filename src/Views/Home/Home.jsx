@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text } from '@chakra-ui/core'
+import { Flex, Text, Button } from '@chakra-ui/core'
 import Typewriter from 'typewriter-effect'
 
 import ActivitySearchCard from '../../Components/ActivitySearchCard'
@@ -38,6 +38,10 @@ const Home = () => {
         </Text>
       </Flex>
       <ActivitySearchCard />
+      <Text color="gray.50" fontSize="24px" my="40px"> - OR - </Text>
+      <Button height="100px" width="200px" color="brand.400" fontSize="24px" fontWeight="bold" letterSpacing="-2px">
+        Host an Event!
+      </Button>
     </Flex>
   )
 }
