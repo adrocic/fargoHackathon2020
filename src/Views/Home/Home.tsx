@@ -1,36 +1,13 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Flex } from '@chakra-ui/core';
+import React from 'react';
+import { Flex, Box } from '@chakra-ui/core';
 
-import CircleNavButton from 'Components/CircleNavButton';
-import SearchBar from 'Components/SearchBar';
-import PokemonList from 'Components/PokemonList';
-
-const Pokedex: React.FC = () => {
-    const [currentSearch, setCurrentSearch] = useState('');
-
-    const useQuery = (): URLSearchParams => {
-        return new URLSearchParams(useLocation().search);
-    };
-
-    const page = useQuery();
-    const name = useQuery();
-
-    const currentPage = page.get('page') ?? '1';
-    const searchTerm = name.get('name') ?? '';
+const Home = () => {
 
     return (
-        <Flex height="100%" width="100vw" justify="center">
-            <Flex px={12} py={12} align="center" direction="column" width="70%" bg="teal.400">
-                <Flex width="100%" align="center" justify="center" mb={12}>
-                    <CircleNavButton navDirection="back" currentSearch={currentSearch} />
-                    <SearchBar currentSearch={currentSearch} setCurrentSearch={setCurrentSearch} />
-                    <CircleNavButton navDirection="forward" currentSearch={currentSearch} />
-                </Flex>
-                <PokemonList page={currentPage} name={searchTerm} />
-            </Flex>
+        <Flex height="100%" width="100vw" justifyContent="center" alignItems="center" background="dodgerblue">
+            <Box height="200px" width="200px" fontSize="24px" color="gray.50" background="floralwhite">Home</Box>
         </Flex>
     );
 };
 
-export default Pokedex;
+export default Home;
