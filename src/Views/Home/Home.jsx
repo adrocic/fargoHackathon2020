@@ -1,13 +1,36 @@
-import React from 'react';
-import { Flex, Box } from '@chakra-ui/core';
+import React from 'react'
+import { Flex, Text } from '@chakra-ui/core'
+import Typewriter from 'typewriter-effect'
 
 const Home = () => {
+  return (
+    <Flex
+      height="100%"
+      width="100vw"
+      justifyContent="center"
+      alignItems="center"
+      background="dodgerblue"
+    >
+      <Flex>
+        <Text>Host or Find an event for</Text>
+        <Typewriter
+          options={{
+            strings: [
+              'Fun!',
+              'Excitement!',
+              'Exercise!',
+              'Socializing',
+              'Community',
+              'Coffee Time!',
+              'Food Time!',
+            ],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </Flex>
+    </Flex>
+  )
+}
 
-    return (
-        <Flex height="100%" width="100vw" justifyContent="center" alignItems="center" background="dodgerblue">
-            <Box height="200px" width="200px" fontSize="24px" color="gray.50" background="floralwhite">Home</Box>
-        </Flex>
-    );
-};
-
-export default Home;
+export default Home

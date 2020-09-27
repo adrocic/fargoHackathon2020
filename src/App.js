@@ -1,11 +1,24 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { CSSReset, ThemeProvider } from '@chakra-ui/core'
+
+import Home from './Views/Home'
 
 function App() {
   return (
     <div className="App">
-      <div>Hello from App.js!</div>
+      <ThemeProvider>
+        <CSSReset />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
